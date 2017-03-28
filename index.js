@@ -10,7 +10,9 @@ function meeseeksGet(object, path, defaultValue) {
       : acc[key];
   }, object);
 
-  return reducedValue || defaultValue;
+  return isNullOrUndefined(reducedValue)
+    ? defaultValue
+    : reducedValue;
 }
 
 

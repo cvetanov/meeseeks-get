@@ -9,6 +9,12 @@ var johnCena = {
   age: 46
 };
 
+var truthyFalsyTest = {
+  a: {
+    b: 0
+  }
+};
+
 var complexObject = {
   person: {
     name: {
@@ -45,6 +51,7 @@ console.log('should get plain properties with string path');
 assert(meeseeksGet(complexObject, 'person.name.last') === 'Doe');
 assert(meeseeksGet(complexObject, 'person.age') === 42);
 assert(meeseeksGet(complexObject, 'person.friends.[0].friends.[0].age') === 46);
+assert(meeseeksGet(truthyFalsyTest, 'a.b', -1) === 0);
 
 console.log('should get array properties with string path');
 assert(meeseeksGet(complexObject, 'dogs.0') === complexObject.dogs[0]);
