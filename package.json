@@ -4,7 +4,7 @@
   "description": "I'm Mr. Meeseeks! Look at me! I can get any nested value for you from the most complex objects.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test.js"
   },
   "repository": {
     "type": "git",
