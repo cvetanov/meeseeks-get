@@ -26,7 +26,7 @@ Array objects can be accessed via index directly or with an index in brackets `m
 Few example usages:
 ```
 var complexObject = {
-    person: {
+    mainActor: {
         name: 'Mister Meeseeks'
     },
     friends: [
@@ -34,19 +34,19 @@ var complexObject = {
             name: 'Rick'
         },
         {
-            name: 'Morty
+            name: 'Morty'
         }
     ]
 }
 // with string path
-meeseeksGet(complexObject, 'person.name') === 'Mister Meeseeks'
-meeseeksGet(complexObject, 'person.friends.0.name') === 'Rick'
-meeseeksGet(complexObject, 'person.friends.[0].name') === 'Rick'
+meeseeksGet(complexObject, 'mainActor.name') === 'Mister Meeseeks'
+meeseeksGet(complexObject, 'friends.0.name') === 'Rick'
+meeseeksGet(complexObject, 'friends.[0].name') === 'Rick'
 
 // with array path
-meeseeksGet(complexObject, ['person', 'name']) === 'Mister Meeseeks'
-meeseeksGet(complexObject, ['person', 'friends', 0, 'name']) === 'Rick'
+meeseeksGet(complexObject, ['mainActor', 'name']) === 'Mister Meeseeks'
+meeseeksGet(complexObject, ['friends', 0, 'name']) === 'Rick'
 
 // with default value
-meeseeksGet(complexObject, 'person.race', 'imaginary creature') === 'imaginary creature'
+meeseeksGet(complexObject, 'mainActor.race', 'imaginary creature') === 'imaginary creature'
 ```
